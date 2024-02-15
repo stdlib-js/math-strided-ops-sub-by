@@ -50,13 +50,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import subBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-sub-by@deno/mod.js';
+import subBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-sub-by@v0.2.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-sub-by@deno/mod.js';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-sub-by@v0.2.0-deno/mod.js';
 ```
 
 #### subBy( N, x, strideX, y, strideY, z, strideZ, clbk\[, thisArg] )
@@ -231,7 +231,7 @@ subBy.ndarray( 3, x, 2, 1, y, -1, y.length-1, z, 1, 2, accessor );
 var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
 import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@deno/mod.js';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-import subBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-sub-by@deno/mod.js';
+import subBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-sub-by@v0.2.0-deno/mod.js';
 
 function accessor( values, i ) {
     if ( (i%3) === 0 ) {
