@@ -43,25 +43,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-strided-ops-sub-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import subBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-sub-by@esm/index.mjs';
-```
-The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-strided-ops-sub-by/tags). For example,
-
-```javascript
-import subBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-sub-by@v0.2.0-esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-sub-by@esm/index.mjs';
+var subBy = require( '@stdlib/math-strided-ops-sub-by' );
 ```
 
 #### subBy( N, x, strideX, y, strideY, z, strideZ, clbk\[, thisArg] )
@@ -141,7 +148,7 @@ subBy( 3, x, 2, y, -1, z, 1, accessor );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 function accessor( values ) {
     return values;
@@ -232,16 +239,11 @@ subBy.ndarray( 3, x, 2, 1, y, -1, y.length-1, z, 1, 2, accessor );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-var uniform = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform' ).factory;
-import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@esm/index.mjs';
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import subBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-ops-sub-by@esm/index.mjs';
+```javascript
+var uniform = require( '@stdlib/random-base-uniform' ).factory;
+var filledarray = require( '@stdlib/array-filled' );
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var subBy = require( '@stdlib/math-strided-ops-sub-by' );
 
 function accessor( values, i ) {
     if ( (i%3) === 0 ) {
@@ -262,10 +264,6 @@ console.log( z );
 
 subBy.ndarray( x.length, x, 1, 0, y, -1, y.length-1, z, 1, 0, accessor );
 console.log( z );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -289,7 +287,7 @@ console.log( z );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -319,8 +317,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-strided-ops-sub-by.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-strided-ops-sub-by
 
-[test-image]: https://github.com/stdlib-js/math-strided-ops-sub-by/actions/workflows/test.yml/badge.svg?branch=v0.2.0
-[test-url]: https://github.com/stdlib-js/math-strided-ops-sub-by/actions/workflows/test.yml?query=branch:v0.2.0
+[test-image]: https://github.com/stdlib-js/math-strided-ops-sub-by/actions/workflows/test.yml/badge.svg?branch=v0.2.1
+[test-url]: https://github.com/stdlib-js/math-strided-ops-sub-by/actions/workflows/test.yml?query=branch:v0.2.1
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-strided-ops-sub-by/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-strided-ops-sub-by?branch=main
@@ -356,7 +354,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/math/base/ops/sub]: https://github.com/stdlib-js/math-base-ops-sub/tree/esm
+[@stdlib/math/base/ops/sub]: https://github.com/stdlib-js/math-base-ops-sub
 
 </section>
 
