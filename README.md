@@ -35,7 +35,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Element-wise [subtraction][@stdlib/math/base/ops/sub] of two strided arrays via a callback function.
+> Element-wise [subtraction][@stdlib/number/float64/base/sub] of two strided arrays via a callback function.
 
 <section class="intro">
 
@@ -73,7 +73,7 @@ var subBy = require( '@stdlib/math-strided-ops-sub-by' );
 
 #### subBy( N, x, strideX, y, strideY, z, strideZ, clbk\[, thisArg] )
 
-Performs element-wise [subtraction][@stdlib/math/base/ops/sub] of two strided arrays via a callback function and assigns each result to an element in an output strided array.
+Performs element-wise [subtraction][@stdlib/number/float64/base/sub] of two strided arrays via a callback function and assigns each result to an element in an output strided array.
 
 ```javascript
 function accessor( values ) {
@@ -170,7 +170,7 @@ subBy( 3, x1, -2, y1, 1, z1, 1, accessor );
 
 #### subBy.ndarray( N, x, strideX, offsetX, y, strideY, offsetY, z, strideZ, offsetZ, clbk\[, thisArg] )
 
-Performs element-wise [subtraction][@stdlib/math/base/ops/sub] of two strided arrays via a callback function and assigns each result to an element in an output strided array using alternative indexing semantics.
+Performs element-wise [subtraction][@stdlib/number/float64/base/sub] of two strided arrays via a callback function and assigns each result to an element in an output strided array using alternative indexing semantics.
 
 ```javascript
 function accessor( values ) {
@@ -362,7 +362,7 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/math/base/ops/sub]: https://github.com/stdlib-js/math-base-ops-sub
+[@stdlib/number/float64/base/sub]: https://github.com/stdlib-js/number-float64-base-sub
 
 <!-- <related-links> -->
 
